@@ -1,5 +1,210 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-attachment: fixed;
+  background-color: var(--background-color);
+  background-image: url(../images/cover-image-dark.png);
+  block-size: auto;
+  background-size: cover;
+}
+
+.header {
+  min-block-size: 100%;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: normal;
+  padding: 20px;
+}
+
+.decorated-zone__text {
+  position: absolute;
+  top: 20px;
+  right: 48px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--accent-color);
+}
+
+.decorated-zone__text::after {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  top: 8px;
+  right: -19px;
+  background: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 20px;
+  top: 723px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: var(--accent-color);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 20px;
+  top: 20px;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--accent-color);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 20px;
+}
+
+.header__theme-menu-item {
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  color: var(--accent-color);
+}
+
+.decorated-zone {
+  height: 768px;
+}
+
+.header_title {
+  margin-left: -20px;
+  align-self: flex-start;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  color: var(--title-color);
+  line-height: 82.5%;
+}
+
+.text-shadow {
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.header_description {
+  justify-self: end;
+  align-self: center;
+  max-width: 491px;
+  min-height: 70px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--font-color-dark);
+}
+
+.title-decor {
+  background: var(--accent-color);
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  padding: 1px 13px;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: #FF0070;
+  border-top: inherit;
+  border-left: inherit;
+  border-right: inherit;
+  text-decoration: underline;
+  outline: 1px solid transparent;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid #FF0070;
+  color: white;
+} 
+
+.header__theme-menu-button_active:hover {
+  outline: none;
+  color: inherit;
+  cursor: default;
+}
+
+@media (width <=768px) {
+
+  .header {
+    padding: 10px;
+  }
+
+  .header_title {
+    margin-left: 0;
+  }
+
+  .header::before {
+    left: 10px;
+    top: 633px;
+  }
+  
+  .header::after {
+    right: 10px;
+    top: 10px;
+  }
+
+  .decorated-zone__text {
+    right: 38px;
+    top: 10px;
+  }
+
+  .header_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-bottom: 80px;
+  }
+
+  .header__theme-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+  }
+
+  .header__theme-menu-list {
+    align-self: center;
+    display: inline;
+  }
+
+  .header__theme-menu-item {
+    margin-bottom: 12px;
+  }
+
+  .header__theme-menu-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .title-decor {
+    margin-bottom: 180px;
+  }
+
+}
+  
+@media (width <=375px) {
+  .header_title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }
