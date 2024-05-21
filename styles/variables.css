@@ -1,8 +1,19 @@
 :root {
-  --font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif; 
-  --accent-color: #FF0070;
-  --font-color-dark: #000028;
-  --title-color: #DB00FF;
-  --background-color: #000028;
-  /* --background-image: url(../images/cover-image-dark.png); */
+  --font-family: var(--font-family); 
+  --accent-color: var(--accent-color);
+  --font-color: var(--font-color);
+  --font-color-menu: var(--font-color-menu);
+  --font-color-menu-hover: var(--font-color-menu-hover);
+  --title-color: var(--title-color);
+  --title-decor-color: var(--title-decor-color);
+  --background-color: var(--background-color);
+  --background-image: var(--background-image);
+  --padding-desktop: 20px;
+  --padding-mobile: 10px;
+  --decoration-top-desktop: 20px;
+  --decoration-left-desktop: 20px;
+  --decoration-right-desktop: 20px; 
+  --decoration-top-mobile: 10px;
+  --decoration-left-mobile: 10px;
+  --decoration-right-mobile: 10px;
 }
