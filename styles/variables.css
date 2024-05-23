@@ -1,7 +1,11 @@
 :root {
-  --font-family: var(--font-family); 
+  --font-family: 'IBM Plex Mono', Arial, Helvetica, sans-serif;
+  --font-size: 18px;
+  --line-height: 23.4px;
   --accent-color: var(--accent-color);
   --font-color: var(--font-color);
+  --font-color-title: var(--font-color-title);
+  --font-text-color: var(--font-text-color);
   --font-color-menu: var(--font-color-menu);
   --font-color-menu-hover: var(--font-color-menu-hover);
   --title-color: var(--title-color);
@@ -10,10 +14,21 @@
   --background-image: var(--background-image);
   --padding-desktop: 20px;
   --padding-mobile: 10px;
+  --gap-desktop: 20px;
+  --gap-mobile: 10px;
   --decoration-top-desktop: 20px;
   --decoration-left-desktop: 20px;
   --decoration-right-desktop: 20px; 
   --decoration-top-mobile: 10px;
   --decoration-left-mobile: 10px;
   --decoration-right-mobile: 10px;
+  --header-margin-bottom-desktop: 60px;
+  --header-margin-bottom-mobile: 40px;
+  --text-block-margin-bottom-desktop: 80px;
+  --text-block-margin-bottom-mobile: 50px;
+  --footer-margin-top: 60px;
+  --block_text-margin-top: 10px;
+  --block_text-margin-bottom: 20px;
+  --section_gap: 20px;
+  --inline_block-margin-top: 20px;
 }
