@@ -379,10 +379,6 @@
     margin-bottom: 0;
   }
 
-  .gallery {
-    display: inline-block;
-  }
-
   .section__block-one {
     grid-template-columns: 255px 1fr;
   }
@@ -393,6 +389,10 @@
 
   .section__block-two .block_text_title {
     max-width: 236px;
+  }
+
+  .section__block-two {
+    margin-bottom: 60px;
   }
 
   .block_two .block_text {
@@ -408,20 +408,27 @@
     margin-right: 20px;
   }
 
-  /* ---------остановился тут -----------*/
-
-  
-
+  .no_margin_block_right {
+    padding-right: 0;
+  }
+    
+  .block_two .article:last-child {
+    padding-right: 0;
+  }
 
   .section__block-three {
-    display: inline-block;
+    grid-template-columns: 256px 1fr;
+  }
+
+  .block_two .block_text_subtitle {
+    margin-right: 20px;
+  }
+
+  .footer_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
   
-
-
-
-
 @media (width <=376px) {
   
   .header {
@@ -433,22 +440,28 @@
     max-height: 668px;
   }
 
-  .section__block-two .block_text_title {
-    max-width: 355px;
+  .header::before {
+    left: var(--decoration-mobile);
+    top: 633px;
+  }
+  
+  .header::after {
+    right: var(--decoration-mobile);
+    top: var(--decoration-mobile);
   }
   
   .block_two .block_text {
     max-width: 355px;
-    margin-bottom: var(--block_text-margin-bottom);
+    margin-right: 0;
   }
 
   .no_margin .block_text   {
     margin-bottom: 0;
   }
 
-
   .section__block-one {
-    margin-bottom: var(--text-block-margin-bottom-mobile);
+    display: inline-block;
+    margin-bottom: 50px;
   }
 
   .section__block-two {
@@ -456,7 +469,7 @@
   }
 
   .section__block-two .block_text_title {
-    max-width: 355px;
+    max-width: 305px;
   }
 
   .block_text_subtitle {
@@ -470,6 +483,14 @@
 
   .no_margin .block_text_subtitle {
     margin-right: 0;
+  }
+
+  .section__block-three {
+    display: inline-block;
+  }
+
+  .section__block-two .block_text_subtitle {
+    margin-right: 10px;
   }
 
   .section__block-three .block_text_subtitle {
@@ -525,13 +546,12 @@
   .header_title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin-top: 70px;
-    margin-left: 0;
+    margin-left: 10px;
   }
 
   .header__theme-menu {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 68px;
+    margin-top: 76px;
+    margin-right: 10px;
   }
 
   .header__theme-menu-item {
@@ -539,9 +559,9 @@
   }
 
   .title-decor {
-    max-width: 355px;
-    align-self: flex-start;
     margin-top: 56px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .footer {
@@ -570,7 +590,6 @@
   .header__theme-menu-list {
     align-self: center;
     display: inline;
-    
   }
 
   .header__theme-menu-item {
