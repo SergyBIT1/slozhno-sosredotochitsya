@@ -4,7 +4,7 @@
   --font-color-title: #353430;
   --font-text-color: #353430;
   --font-color-menu: #353430;
-  --font-color-menu-hover: #FF0070 40%;
+  --font-color-menu-hover: #32312D66;
   --title-color: #FFC2E6;
   --title-decor-color: #FF8DCB;
   --background-color: #FFF1F7;
@@ -22,15 +22,17 @@
   --font-color-title: #353430;
   --font-text-color: #353430;
   --font-color-menu: #353430;
-  --font-color-menu-hover: #FF0070 40%;
+  --font-color-menu-hover: #32312D66;
   --title-color: #FFC2E6;
   --title-decor-color: #FF8DCB;
   --background-color: #FFF1F7;
   --background-image: url(../images/cover-image-light.png);   
   }
    
-  .decorated-zone__text {
-      display: none;
+  .theme_auto .decorated-zone__text {
+    display: none;
   }
 }
+
+
 

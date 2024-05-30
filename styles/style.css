@@ -49,7 +49,7 @@
   bottom: var(--decoration-desktop);
   border-width: 0px 0px 1px 1px;
   border-style: solid;
-  border-color: var(--font-color);
+  border-color: var(--font-color-menu);
 }
 
 .decorated-zone::after {
@@ -61,7 +61,7 @@
   top: var(--decoration-desktop);
   border-width: 1px 1px 0px 0px;
   border-style: solid;
-  border-color: var(--font-color);
+  border-color: var(--font-color-menu);
 }
 
 .decorated-zone {
@@ -91,7 +91,6 @@
   justify-self: end;
   align-self: center;
   max-width: 491px;
-  max-height: 71px;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: 700;
@@ -150,8 +149,8 @@
 }
 
 .header__theme-menu-button:hover {
+  border-bottom: currentColor;
   outline: 1px solid var(--font-color-menu-hover);
-  color: var(--font-color-menu-hover);
 } 
 
 .section__block-why-how {
@@ -210,17 +209,17 @@
 }
 
 .section__block-explain-what .wrapper {
-  display: flex;
   gap: var(--gap-desktop);
   margin-left: var(--block_text-margin-bottom);
   margin-right: var(--block_text-margin-bottom);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .section__block-explain-what .article {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-width: 315px;
 }
 
 .section__block-explain-what .block_text_title {
@@ -229,6 +228,10 @@
 
 .section__block-why-how .block_text {
   margin-bottom: var(--block_text-margin-bottom);
+}
+
+section:nth-of-type(3) .block_text_subtitle { 
+  margin-right: var(--decoration-desktop);
 }
 
  .block_text_title-pale {
@@ -336,7 +339,6 @@
 
   .header_description {
     max-width: 364px;
-    max-height: 117px;
   }
 
   .header_title {
@@ -384,11 +386,22 @@
   }
 }
   
-@media (width <=376px) {
-  
-  .decorated-zone {
-    min-height: 668px;
+@media (width <= 620px) {
+
+  .section__block-why-how {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--padding-mobile);
+    padding-right: var(--padding-mobile);
   }
+
+  .section__block-why-how .wrapper {
+    padding-left: var(--padding-mobile);
+    padding-right: var(--padding-mobile);
+  }
+}
+
+@media (width <=376px) {
 
   .decorated-zone::before {
     left: var(--decoration-mobile);
@@ -421,18 +434,22 @@
   }
 
   .section__block-why-how .wrapper {
-    padding-left: var(--padding-mobile);
-    padding-right: var(--padding-mobile);
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .section__block-why-how .block_text_title {
-    margin-left: var(--decoration-mobile);
+    margin-left: 0;
     margin-bottom: var(--block_text-margin-bottom);
     max-width: 355px;
   } 
 
   .section__block-why-how .article {
     padding-right: 0;
+  }
+
+  .section__block-why-how .wrapper .block_text_subtitle {
+    margin-right: 0;
   }
 
   .section__block-explain-what {
