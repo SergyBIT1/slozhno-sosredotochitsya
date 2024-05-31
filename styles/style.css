@@ -365,7 +365,7 @@ section:nth-of-type(3) .block_text_subtitle {
   }
 
   .section__block-why-how .block_text_title {
-    max-width: 236px;
+    max-width: 235px;
   }
 
   .section__block-explain-what .block_text_title {
@@ -399,6 +399,29 @@ section:nth-of-type(3) .block_text_subtitle {
     padding-left: var(--padding-mobile);
     padding-right: var(--padding-mobile);
   }
+
+  .section__block-why-how .article {
+    padding-right: 0;
+  }
+
+  .section__block-why-how .block_text_title {
+    max-width: 290px;
+    margin-left: var(--decoration-mobile);
+  }
+
+  .section__block-explain-what .block_text_title {
+    max-width: 355px;
+  }
+
+ .section__block-why-how .block_text_title {
+    max-width: 355px;
+    margin-bottom: var(--block_text-margin-bottom);
+ }
+
+ .section__block-why-how .wrapper .block_text_subtitle {
+  margin-right: 0;
+ }
+
 }
 
 @media (width <=376px) {
